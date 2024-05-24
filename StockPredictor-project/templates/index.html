@@ -1,0 +1,20 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Predictor</title>
+  </head>
+  <body>
+    <div>
+      <h1>Stock Price Predictor</h1>
+      <form action="{{url_for('predict')}}" method ="POST">
+        <input type="text" name="Ticker" placeholder="Enter Stock Symbol">
+        <button type="submit">Predict Stock Price</button>
+      </form>
+      <p>{{ prediction_text }}</p>
+      
+    </div>
+  </body>
+</html>
