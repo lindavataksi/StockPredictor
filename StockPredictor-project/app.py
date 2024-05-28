@@ -11,16 +11,17 @@ def main():
 def predict():
     if request.method == 'POST':
         ticker = request.form['Ticker']
-        current_price, future_price = predict_stock_price(ticker)
-        prediction_text = f"The current price of {ticker} is ${current_price} and the predicted price after 365 days is ${future_price}."
-        return render_template('index.html', prediction_text=prediction_text)
+        current_price, future_price, accuracy_percentage = predict_stock_price(ticker)
+        prediction_text = f"The current price of {ticker} is ${current_price} and the predicted price after 1 year is ${future_price}."
+        accuracy = f"Accuracy : {accuracy_percentage}%"
+        return render_template('index.html', prediction_text=prediction_text, accuracy = accuracy)
     elif request.method == 'GET':
         image_urls = {
             'image1': url_for('static', filename='plot1.png'),
             'image2': url_for('static', filename='plot2.png'),
             'image3': url_for('static', filename='plot3.png')
         }
-        return render_template('index.html', mage_urls = image_urls)
+        return render_template('index.html', image_urls = image_urls)
     return render_template('index.html')
 
 
