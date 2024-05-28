@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stock Predictor</title>
   </head>
+
   <body>
     <div>
       <h1>Stock Price Predictor</h1>
@@ -15,6 +16,18 @@
       </form>
       <p>{{ prediction_text }}</p>
       <p>{{ accuracy }}</p>
+      
+      {% if image_urls %}
+      <div id="image1-container" class="image-container">
+        <img src="{{ image_urls.image1 }}" alt="Historical and Predicted Prices">
+      </div>
+      <div id="image2-container" class="image-container">
+        <img src="{{ image_urls.image2 }}" alt="Scatter Plot">
+      </div>
+      <div id="image3-container" class="image-container">
+        <img src="{{ image_urls.image3 }}" alt="Residual Plot">
+      </div>
+      {% endif %}
     </div>
   </body>
 </html>
