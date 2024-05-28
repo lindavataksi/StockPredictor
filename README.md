@@ -6,7 +6,12 @@ The motivation behind this project is to provide an easy-to-use tool for investo
 
 This project addresses the need for an accessible tool that helps users make informed decisions about their stock investments by providing future price predictions and visual analyses of stock trends. 
 
-Features:
+# Deployment:
+Check out the deployed version of this project on PythonAnywhere:
+
+[StockPredictor](https://stockpredictorapp.pythonanywhere.com/)
+
+# Features:
 --Predict future stock prices based on historical data
 --Visualize historical and predicted stock prices
 --Scatter plot showing the relationship between time index and closing prices
@@ -19,15 +24,17 @@ To run this project locally, follow these steps:
 3. Install the required dependencies
 4. Run the application
 
-Usage:
-1. Open your web browser and navigate to http://127.0.0.1:5000/
+# Usage:
+1. Open your web browser and navigate to https://stockpredictorapp.pythonanywhere.com/
 2. Enter the stock ticker symbol (e.g., AAPL for Apple Inc.) in the input field.
 3. Click on the "Predict Stock Price" button to view the predicted future price, accuracy percentage, and various plots.
 
-Libraries and tools used:
+# Libraries and tools used:
 1. Flask
 2. Pandas
 3. NumPy
 4. Matplotlib
 5. Scikit-learn
 6. yFinance
+7. pythonanywhere
+
